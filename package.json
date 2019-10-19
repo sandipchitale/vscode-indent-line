@@ -1,0 +1,68 @@
+{
+    "name": "vscode-indent-line",
+    "displayName": "Indent line",
+    "icon": "images/icon.png",
+    "description": "VS Code extention to indent line to correct level.",
+    "version": "1.0.0",
+    "publisher": "sandipchitale",
+    "author": {
+        "name": "Sandip Chitale"
+    },
+    "maintainers": [
+        "Sandip Chitale <sandipchitale@gmail.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sandipchitale/vscode-indent-line"
+    },
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:indent-line.indentLine",
+        "onCommand:indent-line.indentLineNextLine"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "indent-line.indentLine",
+                "title": "Indent line"
+            },
+            {
+                "command": "indent-line.indentLineNextLine",
+                "title": "Indent line and continue"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "indent-line.indentLine",
+                "key": "ctrl+alt+[",
+                "mac": "cmd+option+[",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "indent-line.indentLineNextLine",
+                "key": "ctrl+alt+]",
+                "mac": "cmd+option+]",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
