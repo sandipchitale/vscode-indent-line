@@ -3,7 +3,7 @@
     "displayName": "Indent line",
     "icon": "images/icon.png",
     "description": "VS Code extention to indent line to correct level.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "sandipchitale",
     "author": {
         "name": "Sandip Chitale"

@@ -7,7 +7,9 @@ An extension to indent lines to correct level.
 It supports the following commands:
 
 - Indent line               (windows: `cmd+alt+[` , mac: `cmd+option+[` )
+
 - Indent line and next line (windows: `cmd+alt+]` , mac: `cmd+option+]` )
+
 ![Demo](images/indent-line-demo.gif)
 
 ## Known Issues
